@@ -1,0 +1,34 @@
+<div class="disFlex">
+    <h1>Tennis Score Board</h1>
+  </div>
+  
+  <div class="disFlex pad-20" *ngIf="isWinnerReceived">Game {{ name }}</div>
+  
+  <div class="disFlex">
+    <div *ngFor="let player of playerConfig">
+      <app-player
+        [playerName]="player.type"
+        [score]="player.score"
+        (winner)="winnerReceived($event)"
+        (resetBanner)="resetBanner($event)"
+        [reset]="reset"
+      ></app-player>
+    </div>
+  </div>
+  
+  <!-- <div>
+    <div class="disFlex">
+      <div>server</div>
+      <div>receiver</div>
+    </div>
+    <div class="disFlex" style="padding-top:10px">
+      <div>{{ serverScore }}</div>
+      <div>{{ receiverScore }}</div>
+    </div>
+  </div>
+  
+  <div class="disFlex" style="padding-top:20px"> 
+  <button (click)="updateScore(true)">Server got point</button>
+  <button (click)="updateScore">receiver got point</button>
+  </div> -->
+  

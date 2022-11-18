@@ -1,0 +1,14 @@
+.disFlex {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .disFlex div {
+    font-size: large;
+  }
+  
+  .pad-20 {
+    padding: 10px;
+    color: 'red';
+  }
+  
